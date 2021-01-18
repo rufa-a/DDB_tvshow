@@ -1,0 +1,19 @@
+{
+  "name": "ddb_tvshow",
+  "version": "1.0.0",
+  "description": "Distributed Data Base - TV show Add&amp;Lookup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rufa-a/DDB_tvshow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rufa-a/DDB_tvshow/issues"
+  },
+  "homepage": "https://github.com/rufa-a/DDB_tvshow#readme"
+}
