@@ -18,9 +18,11 @@ function tvshowSaveHandler(event) {
         },
     }).then(response => {
         response.json().then((res) => {
-            const tvshowField = document.getElementById("tvshowDataField1");
+            const tvshowActionField = document.getElementById("save-action");
+            const tvshowStatusField = document.getElementById("save-status");
             console.log(res);
-            tvshowField.innerHTML = JSON.stringify(res);
+            tvshowActionField.innerHTML = res.data;
+            tvshowStatusField.innerHTML = res.status;
         })
     }).catch(err => console.log("Error when /save", err));
 }
@@ -32,9 +34,11 @@ function tvshowFindHandler(event) {
 
     fetch('/find/' + tvshowName).then(response => {
         response.json().then((res) => {
-            const tvshowField = document.getElementById("tvshowDataField3");
+            const tvshowIdField = document.getElementById("find-id");
+            const tvshowNameField = document.getElementById("find-name");
             console.log(res);
-            tvshowField.innerHTML = JSON.stringify(res.data);
+            tvshowIdField.innerHTML = JSON.parse(res.data)[0]._id;
+            tvshowNameField.innerHTML = JSON.parse(res.data)[0].name;
         })
     }).catch(err => console.log("Error when /find", err));
 }
